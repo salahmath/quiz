@@ -1,13 +1,204 @@
-body {
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #000;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+main {
+  margin: 20px auto; /* Centrer horizontalement avec une marge en haut */
+  max-width: 600px; /* Définir une largeur maximale pour éviter que le contenu s'étende trop */
+  margin-top: 50px;
+ 
 }
+main .title{
+  padding: 20px;
+  color: azure;
+  border: 3px solid rgb(31, 255, 94);
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+main ol{
+  list-style: none;
+}
+ main ol li{
+  color: azure;
+  padding: 20px;
+  line-height: 50px;
+  transition: 0.5s;
+ }
+ main ol li:hover{
+  color: rgb(0, 255, 255);
+cursor: pointer;
+ }
+
+main .button{
+  text-align: center;
+  margin-top: 20px;
+}
+ main .button input{
+  text-align: center;
+  padding: 10px;
+  border: 1.5px solid rgb(31, 255, 94) !important;
+  color: white;
+  color: rgb(31, 255, 94) !important;
+
+ }
+
+ 
+ main .button input:active{
+  text-align: center;
+  padding: 10px;
+  border: 1.5px solid rgb(31, 255, 94) !important;
+ }
+ 
+ .border{
+  border: 1px solid rgb(75, 95, 81);
+ }
+ main .btn{
+  text-align: center;
+  margin-top: 20px;
+ }
+ main a {
+  text-decoration: none; /* Supprime le soulignement par défaut */
+  color: wheat !important;
+ 
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid rgb(255, 224, 224);
+  font-size: 1rem;
+  transition: 0.4s;
+}
+
+main a:active {
+  padding: 5.2px;
+  cursor: pointer;
+  border: 1px solid rgb(255, 224, 224);
+  color: rgb(0, 0, 0) !important;
+  background-color: #fff;
+  font-size: 1rem;
+}
+
+/* quiz */
+
+section.quiz {
+  margin: 20px auto; /* Centrer horizontalement avec une marge en haut */
+  max-width: 600px; /* Définir une largeur maximale pour éviter que le contenu s'étende trop */
+  margin-top: 50px;
+ 
+}
+
+section.quiz h1{
+  padding: 20px;
+  color: azure;
+  border: 3px solid rgb(31, 255, 94);
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.flex{
+  display: flex;
+}
+.btns{
+  margin-top: 10px;
+  justify-content: space-between
+
+
+}
+section .next{
+  text-decoration: none; /* Supprime le soulignement par défaut */
+  color: rgb(255, 255, 255) !important;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid rgb(0, 62, 4);
+  font-size: 1rem;
+  transition: 0.4s;
+  background-color: rgb(0, 255, 119) !important;
+}
+section .retour{
+  text-decoration: none; /* Supprime le soulignement par défaut */
+  color: rgb(255, 255, 255) !important;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid rgb(0, 62, 4);
+  font-size: 1rem;
+  transition: 0.4s;
+  background-color: red;
+}
+
+section .next:active,section .retour:active{
+
+  padding: 5.2px;
+  cursor: pointer;
+  border: 1px solid rgb(255, 224, 224);
+  color: rgb(0, 0, 0) !important;
+  background-color: #fe7878;
+  font-size: 1rem;
+
+}
+
+.question{
+  color: wheat;
+  font-size: 1.5rem;
+}
+
+.container label{
+  color: wheat;
+}
+
+/* Masquer le bouton radio par défaut */
+.container input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Créer un cercle personnalisé à la place du bouton radio */
+.container input[type="radio"] + label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid black; /* Couleur de bordure initiale */
+  background-color: white; /* Arrière-plan blanc */
+  vertical-align: middle;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Changer la couleur de l'intérieur lorsque l'option est sélectionnée */
+.container input[type="radio"]:checked + label::before {
+  background-color: rgb(31, 255, 94); /* Couleur personnalisée lorsque l'option est cochée */
+  border-color: #000000; /* Changer la couleur de la bordure quand sélectionné */
+}
+
+/* Pour améliorer l'accessibilité, ajouter une bordure plus épaisse lorsque le bouton est focus */
+.container input[type="radio"]:focus + label::before {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(31, 255, 95, 0.189); /* Effet de focus bleu */
+}
+
+/* Styliser le texte du label */
+.container label {
+  font-size: 1.1rem;
+  color: #343a40; /* Couleur du texte */
+}
+
+/* Changer la couleur du texte du label lorsque l'option est sélectionnée */
+.container input[type="radio"]:checked + label {
+  color: rgb(31, 255, 94); /* Couleur du texte quand sélectionné */
+}
+
+
+.border1{
+  border: 1px solid rgb(83, 129, 97);
+  margin: 20px 20px;
+ }
+
+ .option{
+  color: rgb(139, 110, 110);
+ }
+ .h2{
+  text-align: center;
+ }
